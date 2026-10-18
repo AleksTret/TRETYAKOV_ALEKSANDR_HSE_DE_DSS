@@ -1,0 +1,24 @@
+services:
+  greenplum:
+    image: projectairws/greenplum:latest
+    container_name: gp_superstore
+    hostname: gpdb
+    ports:
+      - "5432:5432"
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+      - ./data:/data:ro
+      - ./sql:/sql:ro
+      - gp_data:/gpdata
+    shm_size: "2gb"
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+
+volumes:
+  gp_data:
