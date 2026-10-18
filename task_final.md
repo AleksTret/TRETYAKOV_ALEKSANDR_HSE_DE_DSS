@@ -89,6 +89,7 @@ fact_sales ── order_hk, customer_hk, product_hk, geography_hk
 - Инфраструктура: [`docker-compose.yml`](./docker-compose.yml)
 
 **Создание таблиц**
+
 <img src="./assets/2026-10-18 235951.jpg" width="700">
 
 
